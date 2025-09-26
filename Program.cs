@@ -25,7 +25,7 @@ namespace csharp {
         public static void Main(string[] args)
         {
 
-           
+            Console.WriteLine("Command line arguments");   
             // Run main function parameters
             // Command Line Arguments
             //foreach(string i in args)
@@ -49,6 +49,7 @@ namespace csharp {
 
 
          }
+
         }
 }
 
