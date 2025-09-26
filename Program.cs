@@ -9,7 +9,7 @@ namespace csharp {
         public static void Main(string[] args)
         {
 
-           
+            Console.WriteLine("Command line arguments");   
             // Run main function parameters
             // Command Line Arguments
             foreach(string i in args)
@@ -29,6 +29,7 @@ namespace csharp {
             //private is used to define that the class can access only with in the same class
 
          }
+
         }
 }
 
