@@ -7,47 +7,110 @@ namespace csharp {
 
     class program {
 
-
-        class B
+        public class Tata
         {
-            private int a;
-            public int b;
-            protected int c;
-
-            public void display()
+            public Tata()
             {
-                Console.WriteLine("Hello world");
+                Console.WriteLine("Constructor Tata called");
             }
-            
+
+            public void DisplayTata()
+            {
+                Console.WriteLine("Tata display method called");
+            }
+        }
+
+        public class Nexon:Tata
+        {
+            public Nexon()
+            {
+                Console.WriteLine("Constructor Nexon Callewd");
+            }
+            public void DisplayNexon()
+            {
+                Console.WriteLine("Nexon Display Called");
+            }
+
 
         }
+
+        public class car
+        {
+            string model;
+            string year;
+            public car(string model,string year)
+            {
+                this.model = model;
+                this.year = year;
+            }
+
+            public void displayCar()
+            {
+                Console.WriteLine("Car model is "+ this.model +  " and year is "+ this.year);
+            }
+
+        }
+
+        public class vehicle
+        {
+            protected string type;
+            protected int wheels;
+
+            public vehicle(string type, int wheels)
+            {
+                this.type=type;
+                this.wheels= wheels;
+                Console.WriteLine("Constructor class vehicle is called");
+            }
+
+            public void displayVehicle()
+            {
+                Console.WriteLine("Display method of class vehicle {0} and number of wheels {1} is",this.type,this.wheels);
+            }
+        }
+        
+        public class Bike:vehicle 
+        {
+            private string bikename;
+            public Bike(string type,int wheels,string bikename) : base(type, wheels) //calling base class constrcutor
+            {
+                this.bikename = bikename;
+
+            }
+           public void DisplayBike()
+            {
+                Console.WriteLine("Bike details are {0} , {1} , {2}", this.type, this.wheels, this.bikename);
+            }
+
+        }
+
+        
 
         public static void Main(string[] args)
         {
 
-            Console.WriteLine("Command line arguments");
-            Console.WriteLine("Command line arguments WITH oop CONECPTS");
-            // Run main function parameters
-            // Command Line Arguments
-            //foreach(string i in args)
-            //{
-            //    Console.WriteLine(i);
-            //}
+            //Console.WriteLine("Command line arguments");
+            //Console.WriteLine("Command line arguments WITH oop CONECPTS");
 
-            //Access Modifiers
+            //B clsobj = new B();
+            //clsobj.display();
 
-            // Access Modifiers are keywords that defiene the accessability of the members of he class.
-            //it defines the access limitations of each elements
-            // public, protected,private,internal
-            //By default is private  and in case of class is internal
-            //public access modifier is used to define the class or its members can 
-            //accessed from anywhwre inside the project and also outside
+            //OOPFunc clsobj2 =new OOPFunc();
 
-            //private is used to define that the class can access only with in the same class
+            //clsobj2.Display1();
+            //clsobj2.Display2();
 
-            B clsobj = new B();
-            clsobj.display();
+            //Nexon MyCar = new Nexon();
+            //MyCar.DisplayTata();
+            //MyCar.DisplayNexon();
 
+            //car sibycar = new car("Yaris", "2011");
+            //car manucar = new car("Corrola", "2024");
+            //sibycar.displayCar();
+            //manucar.displayCar();
+            Bike MyBike = new Bike("Bullet", 2, "Hero Honda");
+            MyBike.displayVehicle();
+            MyBike.DisplayBike();
 
          }
 
