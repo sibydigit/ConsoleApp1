@@ -25,7 +25,8 @@ namespace csharp {
         public static void Main(string[] args)
         {
 
-            Console.WriteLine("Command line arguments");   
+            Console.WriteLine("Command line arguments");
+            Console.WriteLine("Command line arguments WITH oop CONECPTS");
             // Run main function parameters
             // Command Line Arguments
             //foreach(string i in args)
